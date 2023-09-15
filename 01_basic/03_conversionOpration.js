@@ -24,8 +24,15 @@ console.log(booleanIsLoggedIn);
  bajak => true
 */
 
-
 let someNumber = 25;
 let stringSomeNumber = String(someNumber)
 console.log(typeof stringSomeNumber);
 console.log(stringSomeNumber);
+
+
+/*
+// ***** Oprations ****** //
+// prefix  postfix
+// x++
+// ++x
+*/
