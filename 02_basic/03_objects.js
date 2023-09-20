@@ -1,6 +1,6 @@
 // 01 singleton (using constractor)
 
-// const tinderUser = new Object()
+// const tinderUser = new Object()  // this is might be contructor
 const tinderUser = {}
 // console.log(tinderUser);    // both gives same empty object
 
@@ -66,4 +66,28 @@ const users = [
 ]
 // console.log(users[0].email)
 
-console.log(tinderUser);
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));    // every key value will be array
+// console.log(tinderUser.hasOwnProperty('isLoggedin'));
+
+
+
+//* Destructuring
+const course = {
+    coursename: "English",
+    price: "999",
+    courseInstructor: "Prashant",
+}
+// normal way to show value from object is
+console.log(course.courseInstructor);
+
+// sortcut to access courseIntructor (value of object)
+const {courseInstructor} = course
+console.log(courseInstructor);
+
+// another way
+const {courseInstructor: instructor} = course
+console.log(instructor);
+// three of them will provide same value
