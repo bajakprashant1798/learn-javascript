@@ -17,19 +17,29 @@ const PrUser = {
     email: "prashant@gmail.com",
     isLoggedIn: false,
     lastLoginDays: ['Monday', 'Saturday']
-}
+}   // symbol and arrays in object
 
 // two ways to access object
-console.log(PrUser.name);
-// console.log(PrUser.full name); // cannot write this way
-console.log(PrUser["full name"]);
-console.log(PrUser[mySym]);
+// console.log(PrUser.name);
+//// console.log(PrUser.full name); // cannot write this way
+// console.log(PrUser["full name"]);
+// console.log(PrUser[mySym]);
 
 PrUser.email = "prashant@newemail.com"
-console.log(PrUser.email);
+// console.log(PrUser.email);
 
 // For lock the value of object we have to freeze the object
-Object.freeze(PrUser);
+// Object.freeze(PrUser);
 PrUser.email = "prashant@oldemail.com"
-console.log(PrUser.email);
-console.log(PrUser);
+// console.log(PrUser.email);
+// console.log(PrUser);    // it will print vales but won't change value
+
+PrUser.greeting = function() {
+    console.log("Hello World!");
+}
+console.log(PrUser.greeting());
+
+PrUser.greetingTwo = function() {
+    console.log(`Hello World!, ${this.name}`);
+}
+console.log(PrUser.greetingTwo());
