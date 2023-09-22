@@ -1,3 +1,4 @@
+//// cannot do operations on filter() only conditions could be run. for operations we need map()
 const coding = ["js", "python", "java", "ruby", "cpp"]
 
 // const values = coding.forEach((item) => {
