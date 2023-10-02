@@ -3,13 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Document Object Model</title>
+
+    <Style>
+        .bg-black {
+            background-color: #111111;
+            color: #fff;
+        }
+    </Style>
 </head>
-<body>
-    <div class="bg-black">
+<body class="bg-black">
+    <!-- <div >
         <h1 id='title' class="heading">Dom Learning</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium fugit aut eum debitis qui voluptatibus saepe aperiam distinctio, magni itaque aliquid dolorum, quisquam at fugiat non sit a possimus corrupti?</p>
+    </div> -->
+
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
     </div>
 </body>
+
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+    // }
+
+    parent.children[1].style.color = "orange";
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling);
+    console.log(dayOne.nextElementSibling.previousElementSibling);
+
+    console.log("Node: ", parent.childNodes);
+</script>
+
 </html>
 
 
@@ -17,4 +55,7 @@
 .innerText will show only visible text
 .innerContent will show invisible text and visible text together 
 .innerHTML will provide full value of html or tag (e.g. p, h1, etc.)
+
+Array.from(HTMLCollection var name)    will convert HTMLCollection into array after that we would be able to apply loops
+
 -->
