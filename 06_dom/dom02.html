@@ -28,7 +28,25 @@
     }
     addOptiLanguage("goLang")
 
-    // edit
+
+    // **edit list inner content(value)**
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML('mojo')    // not optimize`
     
+    // optimized approch
+    const newli = document.createElement('li')
+    newli.textContent = "mojo"  // textContent and innerHTML are almost same
+    // const appendLi = document.createTextNode("Mojo") // this is best optimized way for edit li value
+    // newli.appendChild(appendLi)
+    secondLang.replaceWith(newli)
+
+
+    // one more exmple of edit
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    // *** Remove element *** //
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
 </script>
 </html>
